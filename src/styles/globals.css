@@ -1,0 +1,8 @@
+@tailwind base; @tailwind components; @tailwind utilities;
+html { scroll-behavior: smooth; }
+body { @apply bg-bg text-ink font-sans antialiased; overflow-x: hidden; }
+.glass { background: rgba(8,11,20,.6); backdrop-filter: blur(16px); border: 1px solid rgba(255,255,255,.08); }
+.grad { background: linear-gradient(90deg,#5865FF,#9B5CFF); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.card { @apply glass rounded-2xl p-6 transition hover:border-blue/60 hover:shadow-[0_0_30px_-8px_#5865FF]; }
+section { scroll-margin-top: 90px; }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; } }
